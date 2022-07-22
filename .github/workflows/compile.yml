@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-      - name: Generate releate tag
+      - name: Generate release tag
         id: tag
         run: |
           echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
