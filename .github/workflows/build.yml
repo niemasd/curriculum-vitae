@@ -2,7 +2,9 @@ name: Build and upload LaTeX document
 on: [push]
 jobs:
   build_latex:
-    runs-on: niemasd/document
+    runs-on: ubuntu-latest
+    container:
+      image: niemasd/document
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
